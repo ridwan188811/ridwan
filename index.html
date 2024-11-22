@@ -1,0 +1,268 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Halaman Pribadi</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <style>
+        /* Smooth scrolling untuk seluruh halaman */
+        html {
+            scroll-behavior: smooth;
+        }
+
+        /* Styling untuk header tetap di atas */
+        header {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            background-color: rgb(21, 10, 74);
+            z-index: 1000;
+            padding: 10px 20px;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+        }
+
+        /* Tambahkan padding pada main untuk menghindari konten tertutup oleh header */
+        main {
+            padding-top: 80px;
+        }
+
+        section {
+            margin-top: 60px;
+        }
+
+        /* Styling saat link di-hover */
+        nav ul li a:hover {
+            color: orange;
+        }
+
+        /* Styling saat link di klik atau aktif */
+        nav ul li a:focus, nav ul li a:active {
+            color: orange;
+        }
+
+        /* Highlight aktif pada link yang sedang berada di bagian halaman */
+        nav ul li a.active {
+            color: orange;
+            text-decoration: underline;
+        }
+
+        /* Styling untuk #contact agar teks terpusat */
+        #contact {
+            text-align: center;
+            padding: 0 20px;
+        }
+
+        #contact h2 {
+            font-size: 3rem;
+            margin-bottom: 1rem;
+        }
+
+        .social-icons {
+            display: flex;
+            justify-content: center;
+            gap: 1rem;
+            margin-top: 20px;
+        }
+
+        .social-icons a {
+            font-size: 2.5rem;
+            color: #333;
+            text-decoration: none;
+            transition: color 0.3s ease;
+        }
+
+        .social-icons a:hover {
+            color: orange;
+        }
+
+        /* Styling untuk bagian tugas kuliah */
+        .task-photo {
+            display: block;
+            margin: 20px auto;
+            width: 150px;
+            height: 150px;
+            border-radius: 50%;
+            cursor: pointer;
+            transition: transform 0.2s;
+        }
+
+        .task-photo:hover {
+            transform: scale(1.05);
+        }
+
+        .task-caption {
+            text-align: center;
+            font-weight: bold;
+            margin-bottom: 20px;
+        }
+
+        /* Styling untuk modal */
+        .modal {
+            display: none;
+            position: fixed;
+            z-index: 1000;
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            overflow: auto;
+            background-color: rgba(0,0,0,0.9);
+        }
+
+        .modal-content {
+            margin: auto;
+            display: block;
+            max-width: 90%;
+            max-height: 90%;
+        }
+
+        .modal-content, .modal-caption {
+            animation: zoom 0.6s;
+        }
+
+        @keyframes zoom {
+            from {transform: scale(0)}
+            to {transform: scale(1)}
+        }
+
+        .modal-caption {
+            margin: auto;
+            display: block;
+            text-align: center;
+            color: #ccc;
+            padding: 10px 0;
+            height: 150px;
+        }
+
+        .close {
+            position: absolute;
+            top: 20px;
+            right: 35px;
+            color: #f1f1f1;
+            font-size: 40px;
+            font-weight: bold;
+            transition: 0.3s;
+        }
+
+        .close:hover,
+        .close:focus {
+            color: #bbb;
+            text-decoration: none;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>My Webpage</h1>
+        <nav>
+            <ul>
+                <li><a href="#home">Beranda</a></li>
+                <li><a href="#about">Tentang Saya</a></li>
+                <li><a href="#tasks">Tugas Kuliah</a></li>
+                <li><a href="#contact">Kontak</a></li>
+            </ul>
+        </nav>
+    </header>
+    
+    <main>
+        <section id="home">
+            <div class="background-container">
+                <div class="text-overlay">
+                    <h2>Hi, saya Muhamad Ridwan</h2>
+                    <p>Selamat datang di web pribadi saya</p>
+                </div>
+            </div>
+        </section>
+        
+        <section id="about">
+            <div class="about-divider"></div>
+            <h2>Tentang Saya</h2>
+            <div class="about-content">
+                <div class="photo-gallery">
+                    <img src="image/WhatsApp Image 2024-11-13 at 16.08.19_354855de.jpg" alt="Foto 1" class="photo">
+                    <img src="image/IMG_7480.jpg" alt="Foto 2" class="photo">
+                    <img src="image/WhatsApp Image 2024-11-22 at 04.06.15_92478ce4.jpg" alt="Foto 3" class="photo">
+                </div>
+                <div class="about-description">
+                    <p>Perkenalkan nama saya Muhamad Ridwan, saya seorang mahasiswa semester 3 ,saya kuliah di Universitas Perjuangan, saya berasal dari Pangandaran, Saya lahir di Bandung tanggal 18 November 2004, saya anak ke 2 dari 3 bersaudara,hobi saya adalah badminton dan mengedit video dan poto, saya memiliki pacar namanya Najma Nafisatul Marifah dia sangat cantik.</p>
+                </div>
+            </div>
+        </section>
+        
+        <div class="about-divider"></div>
+
+        <section id="tasks">
+            <h2>Tugas Kuliah</h2>
+            <img src="image/Flowchart.jpg" alt="Tugas 1" class="task-photo" onclick="openModal(this)">
+            <img src="image/dfdlevel0.jpg" alt="Tugas 2" class="task-photo" onclick="openModal(this)">
+            
+            <img src="image/dfdlevel1.jpg" alt="Tugas 3" class="task-photo" onclick="openModal(this)">
+            <img src="image/ERD.jpg" alt="Tugas 3" class="task-photo" onclick="openModal(this)">
+
+            
+            
+        </section>
+        
+        <div class="about-divider"></div>
+
+        <section id="contact">
+            <h2>Kontak</h2>
+            <p>Hubungi saya melalui media sosial berikut:</p>
+            <div class="social-icons">
+                <a href="https://www.instagram.com/mridwan93__" target="_blank" title="Instagram">
+                    <i class="fab fa-instagram"></i>
+                </a>
+                <a href="https://www.tiktok.com/mrdwn93__" target="_blank" title="TikTok">
+                    <i class="fab fa-tiktok"></i>
+                </a>
+                <a href="https://wa.me/081321357859" target="_blank" title="WhatsApp">
+                    <i class="fab fa-whatsapp"></i>
+                </a>
+            </div>
+        </section>
+    </main>
+    
+    <footer>
+        <p>&copy; 2024 <b>Muhamad Ridwan</b> </p>
+    </footer>
+
+    <!-- Modal untuk menampilkan gambar ukuran asli -->
+    <div id="myModal" class="modal">
+        <span class="close">&times;</span>
+        <img class="modal-content" id="img01">
+        <div id="caption"></div>
+    </div>
+
+    <script>
+        // JavaScript untuk membuka modal
+        function openModal(img) {
+            var modal = document.getElementById("myModal");
+            var modalImg = document.getElementById("img01");
+            var captionText = document.getElementById("caption");
+            
+            modal.style.display = "block";
+            modalImg.src = img.src;
+            captionText.innerHTML = img.alt;
+
+            var span = document.getElementsByClassName("close")[0];
+
+            // Tutup modal saat pengguna mengklik (x)
+            span.onclick = function() { 
+                modal.style.display = "none";
+            }
+
+            // Tutup modal saat pengguna mengklik di luar gambar
+            window.onclick = function(event) {
+                if (event.target == modal) {
+                    modal.style.display = "none";
+                }
+            }
+        }
+    </script>
+</body>
+</html>
