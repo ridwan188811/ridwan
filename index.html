@@ -8,151 +8,43 @@
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
     <style>
-        /* Smooth scrolling untuk seluruh halaman */
-        html {
-            scroll-behavior: smooth;
+        /* Semua CSS tetap sama */
+        html { scroll-behavior: smooth; }
+        header { position: fixed; top: 0; left: 0; width: 100%; background-color: rgb(21, 10, 74); z-index: 1000; padding: 10px 20px; box-shadow: 0 2px 4px rgba(0,0,0,0.1); }
+        main { padding-top: 80px; }
+        section { margin-top: 60px; }
+        nav ul li a:hover, nav ul li a:focus, nav ul li a:active { color: orange; }
+        nav ul li a.active { color: orange; text-decoration: underline; }
+        #contact { text-align: center; padding: 0 20px; }
+        #contact h2 { font-size: 3rem; margin-bottom: 1rem; }
+        .social-icons { display: flex; justify-content: center; gap: 1rem; margin-top: 20px; }
+        .social-icons a { font-size: 2.5rem; color: #333; text-decoration: none; transition: color 0.3s ease; }
+        .social-icons a:hover { color: orange; }
+
+        /* Styling untuk tugas kuliah */
+        #tasks {
+            margin-top: 2rem;
+            padding: 40px 20px;
+            text-align: left;
         }
 
-        /* Styling untuk header tetap di atas */
-        header {
-            position: fixed;
-            top: 0;
-            left: 0;
-            width: 100%;
-            background-color: rgb(21, 10, 74);
-            z-index: 1000;
-            padding: 10px 20px;
-            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+        #tasks h2 {
+            font-size: 2.5rem;
+            font-weight: 700;
+            color: #000;
+            margin-bottom: 1.5rem;
         }
 
-        /* Tambahkan padding pada main untuk menghindari konten tertutup oleh header */
-        main {
-            padding-top: 80px;
-        }
-
-        section {
-            margin-top: 60px;
-        }
-
-        /* Styling saat link di-hover */
-        nav ul li a:hover {
-            color: orange;
-        }
-
-        /* Styling saat link di klik atau aktif */
-        nav ul li a:focus, nav ul li a:active {
-            color: orange;
-        }
-
-        /* Highlight aktif pada link yang sedang berada di bagian halaman */
-        nav ul li a.active {
-            color: orange;
-            text-decoration: underline;
-        }
-
-        /* Styling untuk #contact agar teks terpusat */
-        #contact {
-            text-align: center;
-            padding: 0 20px;
-        }
-
-        #contact h2 {
-            font-size: 3rem;
+        .task-text {
+            font-size: 1.75rem;
+            font-weight: 600;
             margin-bottom: 1rem;
         }
 
-        .social-icons {
-            display: flex;
-            justify-content: center;
-            gap: 1rem;
-            margin-top: 20px;
-        }
-
-        .social-icons a {
-            font-size: 2.5rem;
+        .task-description {
+            font-size: 1.25rem;
+            line-height: 1.8;
             color: #333;
-            text-decoration: none;
-            transition: color 0.3s ease;
-        }
-
-        .social-icons a:hover {
-            color: orange;
-        }
-
-        /* Styling untuk bagian tugas kuliah */
-        .task-photo {
-            display: block;
-            margin: 20px auto;
-            width: 150px;
-            height: 150px;
-            border-radius: 50%;
-            cursor: pointer;
-            transition: transform 0.2s;
-        }
-
-        .task-photo:hover {
-            transform: scale(1.05);
-        }
-
-        .task-caption {
-            text-align: center;
-            font-weight: bold;
-            margin-bottom: 20px;
-        }
-
-        /* Styling untuk modal */
-        .modal {
-            display: none;
-            position: fixed;
-            z-index: 1000;
-            left: 0;
-            top: 0;
-            width: 100%;
-            height: 100%;
-            overflow: auto;
-            background-color: rgba(0,0,0,0.9);
-        }
-
-        .modal-content {
-            margin: auto;
-            display: block;
-            max-width: 90%;
-            max-height: 90%;
-        }
-
-        .modal-content, .modal-caption {
-            animation: zoom 0.6s;
-        }
-
-        @keyframes zoom {
-            from {transform: scale(0)}
-            to {transform: scale(1)}
-        }
-
-        .modal-caption {
-            margin: auto;
-            display: block;
-            text-align: center;
-            color: #ccc;
-            padding: 10px 0;
-            height: 150px;
-        }
-
-        .close {
-            position: absolute;
-            top: 20px;
-            right: 35px;
-            color: #f1f1f1;
-            font-size: 40px;
-            font-weight: bold;
-            transition: 0.3s;
-        }
-
-        .close:hover,
-        .close:focus {
-            color: #bbb;
-            text-decoration: none;
-            cursor: pointer;
         }
     </style>
 </head>
@@ -186,28 +78,250 @@
                 <div class="photo-gallery">
                     <img src="image/WhatsApp Image 2024-11-13 at 16.08.19_354855de.jpg" alt="Foto 1" class="photo">
                     <img src="image/IMG_7480.jpg" alt="Foto 2" class="photo">
-                    <img src="image/WhatsApp Image 2024-11-22 at 04.06.15_92478ce4.jpg" alt="Foto 3" class="photo">
+                    <img src="image/WhatsApp Image 2025-04-25 at 13.58.05_1db0f39a.jpg" alt="Foto 3" class="photo">
                 </div>
                 <div class="about-description">
-                    <p>Perkenalkan nama saya Muhamad Ridwan, saya seorang mahasiswa semester 3 ,saya kuliah di Universitas Perjuangan, saya berasal dari Pangandaran, Saya lahir di Bandung tanggal 18 November 2004, saya anak ke 2 dari 3 bersaudara,hobi saya adalah badminton dan mengedit video dan poto, saya memiliki pacar namanya Najma Nafisatul Marifah dia sangat cantik.</p>
+                    <p>Perkenalkan nama saya Muhamad Ridwan, saya seorang mahasiswa semester 3, saya kuliah di Universitas Perjuangan, saya berasal dari Pangandaran, saya lahir di Bandung tanggal 18 November 2004, saya anak ke-2 dari 3 bersaudara, hobi saya adalah badminton dan mengedit video dan foto.</p>
                 </div>
             </div>
         </section>
-        
+
         <div class="about-divider"></div>
 
         <section id="tasks">
             <h2>Tugas Kuliah</h2>
-            <img src="image/Flowchart.jpg" alt="Tugas 1" class="task-photo" onclick="openModal(this)">
-            <img src="image/dfdlevel0.jpg" alt="Tugas 2" class="task-photo" onclick="openModal(this)">
-            
-            <img src="image/dfdlevel1.jpg" alt="Tugas 3" class="task-photo" onclick="openModal(this)">
-            <img src="image/ERD.jpg" alt="Tugas 3" class="task-photo" onclick="openModal(this)">
+            <p class="task-text">TUGAS SISTEM OPERASI</p>
+            <p class="task-description">
+                <b>Tugas 1</b>
+                Diketahui :            
+Jumlah track = 2000,
+Posisi head berada di track : 1234
+Urutan track yang perlu diakses yaitu :
+1600, 1050, 1775, 1950, [x1], 825, 75, 1300, 1450, 600, [x2], 1600, 1050, 30, 1900, [x3], 700, 1300, 55, 425, [x4], 700, 1600, 200.
+Lakukan perhitungan banyaknya proses lintas track yang dilakukan menggunakan ketujuh algoritma (mulai dari PTPD hingga Circular Scan), dan gambarkan grafik perjalanan lintasan yang dilakukan serta tambahkan sedikit narasi sebagai penjelasannya.
+Catatan :
+[x1] adalah tanggal lahir masing-masing x 10, misal : 1 menjadi 10, 29 menjadi 290
+[x2] adalah bulan lahir masing-masing x 100, misal : 4 menjadi 400, 11 menjadi 1100
+[x3] adalah 4 digit tahun lahir masing-masing, misal : 2007, 2010
+[x4] adalah 3 digit terakhir dari NIM, misal 395, 056 menjadi 56
 
-            
+<b>Jawaban</b>
+Tanggal Lahir: 18-11-2004
+NIM          : 2303010079
+[x1] (Tanggal Lahir x 10): 18 x 10 = 180
+[x2] (Bulan Lahir x 100): 11 x 100 = 1100
+[x3] (Tahun Lahir): 2004
+[x4] (3 Digit Terakhir dari NIM): 79
+Urutan track yang perlu diakses setelah penggantian adalah: 1600, 1050, 1775, 1950, 180, 825, 75, 1300, 1450, 600,1100, 1600, 1050, 30, 1900, 2004, 700, 1300, 55, 425, 79, 700, 1600, 200.
+
+<B>1. FCFS (First Come First Serve)</B>
+Posisi head awal: 1234
+Urutan akses track berdasarkan urutan permintaan:
+1234 → 1600 : (selisih 366)  
+1600 → 1050 : (selisih 550)  
+1050 → 1775 : (selisih 725)  
+1775 → 1950 : (selisih 175)  
+1950 → 180 : (selisih 1770)  
+180 → 825  : (selisih 645)  
+825 → 75   : (selisih 750)  
+75 → 1300  : (selisih 1225)  
+1300 → 1450 : (selisih 150)  
+1450 → 600  : (selisih 850)  
+600 → 1100  : (selisih 500)  
+1100 → 1600 : (selisih 500)  
+1600 → 1050 : (selisih 550)  
+1050 → 30   : (selisih 1020)  
+30 → 1900   : (selisih 1870)  
+1900 → 2004 : (selisih 104)  
+2004 → 700  : (selisih 1304)  
+700 → 1300  : (selisih 600)  
+1300 → 55   : (selisih 1245)  
+55 → 425    : (selisih 370)  
+425 → 79    : (selisih 346)  
+79 → 700    : (selisih 621)  
+700 → 1600  : (selisih 900)  
+1600 → 200  : (selisih 1400)
+Perhitungan Total:
+= 366 + 550 + 725 + 175 + 1770 + 645 + 750 + 1225 + 150 + 850 + 500 + 500 + 550 + 1020 + 1870 + 104 + 1304 + 600 + 1245 + 370 + 346 + 621+900+1400
+Total lintasan: 20.165 unit track
+
+<b>2. SSTF (Shortest Seek Time First)</b>
+Posisi head awal: 1234
+Urutan akses track berdasarkan jarak terdekat:
+1234 → 1300 : (selisih 66)  
+1300 → 1450 : (selisih 150)  
+1450 → 1600 : (selisih 150)  
+1600 → 1600 : (selisih 0)  
+1600 → 1775 : (selisih 175)  
+1775 → 1900 : (selisih 125)  
+1900 → 1950 : (selisih 50)  
+1950 → 2004 : (selisih 54)  
+2004 → 1100 : (selisih 904)  
+1100 → 1050 : (selisih 50)  
+1050 → 1050 : (selisih 0)  
+1050 → 825  : (selisih 225)  
+825 → 700   : (selisih 125)  
+700 → 700   : (selisih 0)  
+700 → 600   : (selisih 100)  
+600 → 425   : (selisih 175)  
+425 → 200   : (selisih 225)  
+200 → 180   : (selisih 20)  
+180 → 79    : (selisih 101)  
+79 → 75     : (selisih 4)  
+75 → 55     : (selisih 20)  
+55 → 30     : (selisih 25)
+Perhitungan Total:
+= 66 + 150 + 150 + 0 + 175 + 125 + 50 + 54 + 904 + 50 + 0 + 225 + 125 + 0 + 100 + 175 + 225 + 20 + 101+4+20+25
+Total lintasan: 2744 unit track
+
+<b>3. SCAN</b>
+Posisi head awal: 1234
+Arah head: kanan (naik)
+Urutan akses track:
+1234 → 1300 : (selisih 66)  
+1300 → 1450 : (selisih 150)  
+1450 → 1600 : (selisih 150)  
+1600 → 1600 : (selisih 0)  
+1600 → 1775 : (selisih 175)  
+1775 → 1900 : (selisih 125)  
+1900 → 1950 : (selisih 50)  
+1950 → 2004 : (selisih 54)  
+(mentok ke 2000, lalu balik)  
+2004 → 1100 : (selisih 904)  
+1100 → 1050 : (selisih 50)  
+1050 → 1050 : (selisih 0)  
+1050 → 825  : (selisih 225)  
+825 → 700   : (selisih 125)  
+700 → 700   : (selisih 0)  
+700 → 600   : (selisih 100)  
+600 → 425   : (selisih 175)  
+425 → 200   : (selisih 225)  
+200 → 180   : (selisih 20)  
+180 → 79    : (selisih 101)  
+79 → 75     : (selisih 4)  
+75 → 55     : (selisih 20)  
+55 → 30     : (selisih 25)
+Perhitungan Total:
+= 66 + 150 + 150 + 0 + 175 + 125 + 50 + 54 + 904 + 50 + 0 + 225 + 125 + 0 + 100 + 175 + 225 + 20 + 101+4+20+25
+Total lintasan: 2719 unit track
+
+<b>4. LOOK</b>
+Posisi head awal: 1234
+Arah head: kanan (naik)
+Urutan akses track:
+1234 → 1300 : (selisih 66)  
+1300 → 1450 : (selisih 150)  
+1450 → 1600 : (selisih 150)  
+1600 → 1600 : (selisih 0)  
+1600 → 1775 : (selisih 175)  
+1775 → 1900 : (selisih 125)  
+1900 → 1950 : (selisih 50)  
+1950 → 2004 : (selisih 54)  
+(langsung balik arah)  
+2004 → 1100 : (selisih 904)  
+1100 → 1050 : (selisih 50)  
+1050 → 1050 : (selisih 0)  
+1050 → 825  : (selisih 225)  
+825 → 700   : (selisih 125)  
+700 → 700   : (selisih 0)  
+700 → 600   : (selisih 100)  
+600 → 425   : (selisih 175)  
+425 → 200   : (selisih 225)  
+200 → 180   : (selisih 20)  
+180 → 79    : (selisih 101)  
+79 → 75     : (selisih 4)  
+75 → 55     : (selisih 20)  
+55 → 30     : (selisih 25)
+Perhitungan Total:
+= 66 + 150 + 150 + 0 + 175 + 125 + 50 + 54 + 904 + 50 + 0 + 225 + 125 + 0 + 100 + 175 + 225 + 20 + 101+4+20+25
+Total lintasan: 2715 unit track
+
+<b>5. C-SCAN (Circular SCAN)</b>
+Posisi head awal: 1234
+Arah head: kanan (naik)
+Urutan akses track:
+1234 → 1300 : (selisih 66)  
+1300 → 1450 : (selisih 150)  
+1450 → 1600 : (selisih 150)  
+1600 → 1600 : (selisih 0)  
+1600 → 1775 : (selisih 175)  
+1775 → 1900 : (selisih 125)  
+1900 → 1950 : (selisih 50)  
+1950 → 2004 : (selisih 54)  
+(lompat dari 2000 ke 0)  
+0 → 30     : (selisih 30)  
+30 → 55    : (selisih 25)  
+55 → 75    : (selisih 20)  
+75 → 79    : (selisih 4)  
+79 → 180   : (selisih 101)  
+180 → 200  : (selisih 20)  
+200 → 425  : (selisih 225)  
+425 → 600  : (selisih 175)  
+600 → 700  : (selisih 100)  
+700 → 700  : (selisih 0)  
+700 → 825  : (selisih 125)  
+825 → 1050 : (selisih 225)  
+1050 → 1100: (selisih 50)
+Total lintasan: 3866 unit track
+Perhitungan Total:
+= 66 + 150 + 150 + 0 + 175 + 125 + 50 + 54 + 30 + 25 + 20 + 4 + 101 + 20 + 225 + 175 + 100 + 0 + 125 + 225 + 50
+= 1865 + 2001 (dari lompat ke 0 dan lanjut)
+
+<b>6. C-LOOK</b>
+Posisi head awal: 1234
+Arah head: kanan (naik)
+Urutan akses track:
+1234 → 1300 : (selisih 66)  
+1300 → 1450 : (selisih 150)  
+1450 → 1600 : (selisih 150)  
+1600 → 1600 : (selisih 0)  
+1600 → 1775 : (selisih 175)  
+1775 → 1900 : (selisih 125)  
+1900 → 1950 : (selisih 50)  
+1950 → 2004 : (selisih 54)  
+(lompat ke track terkecil 30)  
+30 → 55     : (selisih 25)  
+55 → 75     : (selisih 20)  
+75 → 79     : (selisih 4)  
+79 → 180    : (selisih 101)  
+180 → 200   : (selisih 20)  
+200 → 425   : (selisih 225)  
+425 → 600   : (selisih 175)  
+600 → 700   : (selisih 100)  
+700 → 700   : (selisih 0)  
+700 → 825   : (selisih 125)  
+825 → 1050  : (selisih 225)  
+1050 → 1100 : (selisih 50)
+Perhitungan Total:
+= 66 + 150 + 150 + 0 + 175 + 125 + 50 + 54 + 25 + 20 + 4 + 101 + 20 + 225 + 175 + 100 + 0 + 125 + 225 + 50
+Total lintasan: 3685 unit track
+
+<b>7. Elevator</b>
+Posisi head awal: 1234
+Prinsip sama dengan SCAN.
+Total lintasan: 2719 unit track
+
+<B> Grafik</B>
+<img src="image/WhatsApp Image 2025-04-26 at 22.30.18_9f35099c.jpg" width="700" height="400"  >
+Grafik menunjukkan pergerakan head disk berdasarkan tujuh algoritma berbeda.
+FCFS menghasilkan lintasan panjang karena mengikuti urutan masuk, sedangkan SSTF, LOOK, dan C-LOOK membuat pergerakan lebih pendek dan efisien dengan memilih track terdekat.
+Algoritma seperti SCAN dan Elevator memperlihatkan pola naik-turun yang teratur.
+
+
+
+
+
+
+
+
+
+
+
+
+            </p>
             
         </section>
-        
+
         <div class="about-divider"></div>
 
         <section id="contact">
@@ -230,39 +344,5 @@
     <footer>
         <p>&copy; 2024 <b>Muhamad Ridwan</b> </p>
     </footer>
-
-    <!-- Modal untuk menampilkan gambar ukuran asli -->
-    <div id="myModal" class="modal">
-        <span class="close">&times;</span>
-        <img class="modal-content" id="img01">
-        <div id="caption"></div>
-    </div>
-
-    <script>
-        // JavaScript untuk membuka modal
-        function openModal(img) {
-            var modal = document.getElementById("myModal");
-            var modalImg = document.getElementById("img01");
-            var captionText = document.getElementById("caption");
-            
-            modal.style.display = "block";
-            modalImg.src = img.src;
-            captionText.innerHTML = img.alt;
-
-            var span = document.getElementsByClassName("close")[0];
-
-            // Tutup modal saat pengguna mengklik (x)
-            span.onclick = function() { 
-                modal.style.display = "none";
-            }
-
-            // Tutup modal saat pengguna mengklik di luar gambar
-            window.onclick = function(event) {
-                if (event.target == modal) {
-                    modal.style.display = "none";
-                }
-            }
-        }
-    </script>
 </body>
 </html>
