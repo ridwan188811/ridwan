@@ -6,7 +6,6 @@
     box-sizing: border-box;
 }
 
-/* Body styling */
 body {
     font-family: 'Poppins', sans-serif;
     line-height: 1.6;
@@ -15,14 +14,12 @@ body {
     flex-direction: column;
 }
 
-/* Smooth scrolling */
 html {
     scroll-behavior: smooth;
 }
 
-/* Styling header */
 header {
-    background-color: #001f3f;
+    background-color: #000000;
     color: #fff;
     padding: 1rem;
     display: flex;
@@ -44,37 +41,29 @@ nav ul li {
     margin-left: 1rem;
 }
 
-/* Styling link dalam navigasi */
 nav ul li a {
     color: #fff;
     text-decoration: none;
     transition: color 0.3s ease;
 }
 
-/* Styling saat link di-hover */
-nav ul li a:hover {
+nav ul li a:hover,
+nav ul li a:focus,
+nav ul li a:active {
     color: orange;
 }
 
-/* Styling saat link di klik atau aktif */
-nav ul li a:focus, nav ul li a:active {
-    color: orange;
-}
-
-/* Styling untuk bagian utama halaman */
 main {
     padding: 2rem;
     flex: 1;
 }
 
-/* Styling untuk setiap section */
 section {
     margin-bottom: 2rem;
 }
 
-/* Styling untuk section #home */
 #home {
-    background-image: url('image/WhatsApp\ Image\ 2024-11-22\ at\ 04.05.03_45a06e0b.jpg');
+    background-image: url('image/IMG_1254.jpg');
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
@@ -85,7 +74,6 @@ section {
     filter: brightness(70%);
 }
 
-/* Menghilangkan background semi-transparan */
 .background-container {
     width: 100%;
     height: 600px;
@@ -98,53 +86,44 @@ section {
     z-index: 1;
 }
 
-/* Styling overlay teks */
 .text-overlay {
     text-align: center;
     z-index: 4;
 }
 
-/* Styling untuk h2 dalam section #home */
 #home h2 {
     margin: 0;
     font-size: 3rem;
     font-weight: 700;
     letter-spacing: 1px;
-    color: rgb(255, 255, 255);
 }
 
-/* Styling untuk paragraf dalam section #home */
 #home p {
     font-size: 1.5rem;
     font-weight: 300;
-    margin-top: 0px;
-    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0);
+    margin-top: 0;
 }
 
-/* Styling untuk pembatas biru tua sebelum "Tentang Saya" */
 .about-divider {
-    background-color: #001f3f; /* Warna biru tua */
-    height: 20px; /* Tinggi pembatas lebih besar untuk ukuran medium */
-    width: 100%; /* Pembatas memenuhi lebar layar penuh */
-    margin-bottom: 1rem; /* Memberikan jarak antara pembatas dan konten berikutnya */
+    background-color: #000000;
+    height: 20px;
+    width: 100%;
+    margin-bottom: 1rem;
 }
 
-/* Styling untuk section Tentang Saya */
 #about {
-    padding: 0rem 0rem;
+    padding: 0 0;
     text-align: center;
 }
 
-/* Styling untuk h2 dalam section #about */
 #about h2 {
     margin: 0;
     font-size: 2rem;
     font-weight: 700;
     letter-spacing: 1px;
-    color: #000000; /* Warna teks biru tua agar kontras */
+    color: #000;
 }
 
-/* Layout untuk konten tentang saya */
 .about-content {
     display: flex;
     flex-direction: column;
@@ -153,107 +132,66 @@ section {
     margin-top: 2rem;
 }
 
-/* Styling untuk galeri foto di bagian tentang saya */
 .photo-gallery {
     display: flex;
     justify-content: center;
-    gap: 2rem; /* Jarak antar foto */
-    flex-wrap: wrap; /* Agar foto bisa menyesuaikan ukuran layar */
+    gap: 2rem;
+    flex-wrap: wrap;
 }
 
 .photo {
-    width: 300px; /* Ukuran lebar foto */
-    height: auto; /* Menyesuaikan tinggi foto */
-    border-radius: 10px; /* Agar sudut foto lebih lembut */
-    object-fit: cover; /* Menjaga agar foto tetap proporsional */
-    transition: transform 0.3s ease; /* Efek saat foto dihover */
+    width: 300px;
+    height: auto;
+    border-radius: 10px;
+    object-fit: cover;
+    transition: transform 0.3s ease;
 }
 
-/* Efek saat foto dihover */
 .photo:hover {
-    transform: scale(1.1); /* Membesarkan foto saat dihover */
+    transform: scale(1.1);
 }
 
-/* Kolom untuk deskripsi */
 .about-description {
     width: 100%;
     max-width: 1200px;
     text-align: center;
-    font-family: 'Poppins', sans-serif;
     font-size: 1.25rem;
     line-height: 1.8;
-    color: #000000;
+    color: #000;
     margin-top: 2rem;
-    background-color: rgba(71, 75, 156, 0);
     padding: 1rem;
-    border-radius: 10px;
 }
 
-/* Styling untuk footer */
 footer {
     text-align: center;
     padding: 1rem 0;
-    background-color: #1b0553;
+    background-color: #000000;
     color: #fff;
 }
 
-/* Styling untuk task upload */
 #tasks {
-    margin-top: 2rem;
-    text-align: center; /* Pastikan judul tetap di tengah */
-    display: flex; /* Gunakan flexbox untuk tata letak */
-    flex-direction: column; /* Letakkan judul dan gambar dalam kolom */
-    justify-content: center; /* Pastikan konten di tengah */
-    align-items: center; /* Memastikan gambar juga di tengah secara horizontal */
-    padding: 40px 0; /* Memberikan padding lebih besar untuk ruang kosong */
+    margin-top: 1rem;
+    padding: 40px 0;
+    text-align: left; /* Teks isi di dalam #tasks rata kiri */
 }
 
-/* Styling untuk judul Tugas Kuliah */
 #tasks h2 {
-    font-size: 2.5rem; /* Memperbesar ukuran font */
+    font-size: -7rem;
     font-weight: 700;
     letter-spacing: 1px;
-    color: #000000; /* Warna teks */
-    text-align: center; /* Teks di tengah */
-    margin-bottom: 2rem; /* Memberikan jarak lebih besar antara judul dan gambar */
+    color: #000;
+    margin-bottom: 2rem;
+    text-align: center; /* Judul Tugas tetap di tengah */
 }
 
-/* Styling untuk form upload tugas */
-#upload-form {
-    text-align: center;
+/* Tambahan untuk deskripsi tugas */
+.task-description {
+    font-size: 1rem;
+    line-height: 1.8;
+    color: #333;
+    white-space: pre-line; /* Supaya spasi dan enter kebaca */
 }
 
-/* Styling untuk gambar tugas */
-.task-photo {
-    width: 250px;
-    /*Ukurangambarlebihbesar*/height: 250px;
-    /*Ukurantinggisamadenganlebaruntukkotak*/border-radius: 12px;
-    /*Sudutsedikitmembulat*/cursor: pointer;
-    transition: transform 0.2s, box-shadow 0.3s ease-in-out;
-    /*Efeksaathover*/border: 3px solid #ccc;
-    /*Menambahkanborderkotak*/margin: 10px;
-     /* Memberikan jarak antar gambar */
-    -webkit-border-radius: 12px;
-    -moz-border-radius: 12px;
-    -ms-border-radius: 12px;
-    -o-border-radius: 12px;
-}
-
-/* Efek saat hover pada gambar */
-.task-photo:hover {
-    transform: scale(1.1); /* Membesarkan gambar sedikit */
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3); /* Menambahkan bayangan untuk efek */
-}
-
-/* Membuat gambar tugas berjajar ke samping */
-#tasks .task-photo-container {
-    display: flex;
-    justify-content: center; /* Gambar berada di tengah */
-    gap: 20px; /* Jarak antar gambar */
-    flex-wrap: wrap; /* Agar gambar bisa berpindah ke baris jika layar kecil */
-}
-
-/* Responsif */
 @media (max-width: 768px) {
     header {
         flex-direction: column;
@@ -269,7 +207,6 @@ footer {
         margin: 0.5rem 0;
     }
 
-    /* Menyesuaikan ukuran gambar di layar kecil */
     .photo-gallery {
         flex-direction: column;
     }
@@ -279,7 +216,6 @@ footer {
         height: 150px;
     }
 
-    /* Menyesuaikan deskripsi di layar kecil */
     .about-description {
         font-size: 1.1rem;
     }
