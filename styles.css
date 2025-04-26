@@ -185,7 +185,7 @@ footer {
 
 /* Tambahan untuk deskripsi tugas */
 .task-description {
-    font-size: 1rem;
+    font-size: -7rem;
     line-height: 1.8;
     color: #333;
     white-space: pre-line; /* Supaya spasi dan enter kebaca */
