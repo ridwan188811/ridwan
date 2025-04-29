@@ -168,54 +168,128 @@ footer {
     background-color: #000000;
     color: #fff;
 }
+
+header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background-color: rgb(7, 7, 7);
+    z-index: 1000;
+    padding: 10px 20px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+main {
+    padding-top: 80px;
+}
+
+section {
+    margin-top: 60px;
+}
+
+nav ul li a.active {
+    color: orange;
+    text-decoration: underline;
+}
+
+#contact {
+    text-align: center;
+    padding: 0 20px;
+}
+
+#contact h2 {
+    font-size: 3rem;
+    margin-bottom: 1rem;
+}
+
+.social-icons {
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+    margin-top: 20px;
+}
+
+.social-icons a {
+    font-size: 2.5rem;
+    color: #333;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.social-icons a:hover {
+    color: orange;
+}
+
+/* Styling untuk tugas kuliah */
 #tasks {
-    margin-top: 1rem;
-    padding: 40px 0;
-    text-align: left; /* Teks isi di dalam #tasks rata kiri */
+    margin-top: 2rem;
+    padding: 40px 20px;
+    text-align: center;
 }
 
 #tasks h2 {
-    font-size: -7rem;
+    font-size: 2.5rem;
     font-weight: 700;
-    letter-spacing: 1px;
     color: #000;
-    margin-bottom: 2rem;
-    text-align: center; /* Judul Tugas tetap di tengah */
+    margin-bottom: 1.5rem;
 }
 
-/* Tambahan untuk deskripsi tugas */
-.task-description {
-    font-size: -100rem;
-    line-height: 1.8;
+/* Styling untuk box tugas */
+.task-box {
+    display: flex;
+    align-items: center;
+    background-color: #8b7777;
+    border-radius: 10px;
+    padding: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    margin-bottom: 1rem;
+    cursor: pointer;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    position: relative; /* Agar instruksi bisa diposisikan di dalam box */
+    text-decoration: none; /* Menghilangkan underline pada link */
+    color: inherit; /* Warna teks mengikuti yang ada */
+}
+
+/* Menambahkan animasi saat box tugas diklik */
+.task-box:active {
+    transform: scale(1.05); 
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2); 
+}
+
+/* Menambahkan efek pembesaran saat box dihover atau difokuskan */
+.task-box:hover, .task-box:focus {
+    transform: scale(1.05);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+/* Styling untuk instruksi di pojok kanan bawah */
+.task-instruction {
+    position: absolute;
+    bottom: 10px;
+    right: 10px;
+    background-color: rgba(0, 0, 0, 0);
+    color: rgb(0, 0, 0);
+    padding: 5px 10px;
+    border-radius: 5px;
+    font-size: 0.9rem;
+}
+
+/* Styling untuk ikon */
+.task-icon {
+    font-size: 2rem;
+    color: #000;
+    margin-right: 1rem;
+}
+
+/* Styling untuk teks dalam box */
+.task-text h3 {
+    font-size: 1.5rem;
+    font-weight: 600;
     color: #333;
-    white-space: pre-line; /* Supaya spasi dan enter kebaca */
 }
 
-@media (max-width: 768px) {
-    header {
-        flex-direction: column;
-        align-items: flex-start;
-    }
-
-    nav ul {
-        flex-direction: column;
-        padding-left: 0;
-    }
-
-    nav ul li {
-        margin: 0.5rem 0;
-    }
-
-    .photo-gallery {
-        flex-direction: column;
-    }
-
-    .photo {
-        width: 150px;
-        height: 150px;
-    }
-
-    .about-description {
-        font-size: 1.1rem;
-    }
+/* Menambahkan efek hover dan aktif pada link jika ada */
+.task-box:hover {
+    transform: scale(1.05);
 }
