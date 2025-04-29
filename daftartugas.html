@@ -473,6 +473,13 @@ Artinya, head bergerak ke satu arah dan setelah mencapai track terbesar, head be
  <!-- Grafik Perjalanan Lintasan -->
 <h3>Grafik Perjalanan Lintasan (7 Algoritma)</h3>
 <canvas id="diskTrackGraph" width="700" height="300"></canvas>
+Grafik lintasan menunjukkan bahwa setiap algoritma memiliki pola pergerakan yang berbeda, dan hal ini sangat memengaruhi total lintasan (jumlah pergerakan head).<br>
+ Dari grafik:<br>
+1.FCFS (PTPD) menghasilkan lintasan paling panjang, karena head mengikuti urutan kedatangan tanpa memperhatikan efisiensi arah. Grafiknya tampak acak dan meloncat-loncat.<br>
+2.SSTF menampilkan lintasan lebih pendek dibanding FCFS, karena selalu memilih track terdekat. Grafiknya lebih teratur tapi tetap zig-zag.<br>
+3.SCAN dan LOOK menunjukkan grafik yang lebih terarah dan efisien, karena head bergerak ke satu arah sampai ujung (SCAN) atau permintaan terakhir (LOOK), lalu berbalik.<br>
+4.C-SCAN dan C-LOOK menunjukkan grafik naik tajam, lalu lompatan besar ke bawah, menyerupai bentuk huruf "U", mencerminkan gerakan satu arah dan kembali secara melingkar.<br>
+5.Algoritma LOOK dan C-LOOK sedikit lebih hemat dibanding SCAN dan C-SCAN karena tidak memproses track kosong di ujung, hanya memproses permintaan yang ada.<br>
 
 <script>
     // Fungsi untuk scroll ke bagian grafik
@@ -599,6 +606,9 @@ Artinya, head bergerak ke satu arah dan setelah mencapai track terbesar, head be
       }
     });
   }
+
+
+  
 
     function openModal(url) {
       if (url) {
