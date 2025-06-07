@@ -1,0 +1,252 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Tugas 2</title>
+  <link rel="stylesheet" href="tugas2.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+
+    <button id="cancelBtn" onclick="window.location.href='daftartugas.html';">
+        <i class="fas fa-times"></i>
+      </button>
+      
+      </body>
+      
+
+  <h1>Tugas 2 - Penjadwalan Proses</h1>
+
+  <h2>Soal</h2>
+  <p>
+    Diberikan beberapa proses dengan waktu kedatangan dan lama proses sebagai berikut:
+  </p>
+
+  <table border="1" cellpadding="5" cellspacing="0">
+    <tr>
+      <th>Proses</th>
+      <th>Tiba</th>
+      <th>Lama Proses</th>
+    </tr>
+    <tr><td>A</td><td>0</td><td>9</td></tr>
+    <tr><td>B</td><td>2</td><td>3</td></tr>
+    <tr><td>C</td><td>5</td><td>7</td></tr>
+    <tr><td>D</td><td>7</td><td>X1</td></tr>
+    <tr><td>E</td><td>11</td><td>10</td></tr>
+    <tr><td>F</td><td>15</td><td>X2</td></tr>
+    <tr><td>G</td><td>18</td><td>4</td></tr>
+  </table>
+
+  <p><strong>NIM:</strong> 2303010079</p>
+
+  <h3>Ketentuan Penentuan Nilai X1 dan X2</h3>
+  <ol>
+    <li>
+      <strong>X1</strong> merupakan 2 digit terakhir dari NIM.
+    </li>
+    <li>
+      Jika hasil lebih dari 10, maka jumlahkan kedua angkanya hingga hasilnya ≤ 10.
+      <br />
+      <em>Contoh:</em>
+      <ul>
+        <li>14 → 1 + 4 = 5</li>
+        <li>55 → 5 + 5 = 10</li>
+        <li>04 → 0 + 4 = 4</li>
+        <li>89 → 8 + 9 = 17 → 1 + 7 = 8</li>
+        <li>74 → 7 + 4 = 11 → 1 + 1 = 2</li>
+        <li>79 → 7 + 9 = 16 → 1 + 6 = 7</li>
+      </ul>
+    </li>
+    <li>
+      Jika 2 digit terakhir adalah 00, maka nilainya ditetapkan menjadi <strong>10</strong>.
+    </li>
+  </ol>
+
+  <p>
+    Berdasarkan NIM <strong>2303010079</strong>, maka 2 digit terakhir adalah <strong>79</strong> → 7 + 9 = 16 → 1 + 6 = <strong>7</strong>. <br>
+    Jadi, nilai <strong>X1 = 7</strong> dan <strong>X2 = 7</strong>.
+  </p>
+
+  <p>
+    Kerjakan seluruh proses perhitungan berikut gambar yang dibutuhkan untuk:
+  </p>
+
+  <ol>
+    <li>PTPD</li>
+    <li>PTD / SJF</li>
+    <li>PTDP</li>
+    <li>RPTD</li>
+    <li>RR Q = 2</li>
+    <li>RR Q = 3</li>
+    <li>RR Q = 4</li>
+  </ol>
+
+  <h2>Jawaban</h2>
+
+  <!-- Gambar tambahan di sini -->
+  <div style="text-align: center; margin: 20px 0;">
+    <img src="image/Screenshot 2025-06-07 125715.png" alt="Gambar Pendukung Jawaban" style="max-width: 100%; height: auto; border: 1px solid #ccc;">
+  </div>
+  
+  <h3>1. PTPD</h3>
+  <p>Berikut adalah hasil perhitungan menggunakan Excel dan ilustrasi Gantt Chart untuk metode PTPD:</p>
+  
+  <div style="max-width: 800px; margin: 0 auto; text-align: center; padding: 10px;">
+    <p><strong>Tabel Perhitungan (Excel):</strong></p>
+    <img src="image/Screenshot 2025-06-07 125428.png"
+         alt="Tabel Excel PTPD"
+         style="max-width: 100%; height: auto; margin-bottom: 20px; border: 1px solid #ccc;">
+  
+    <p><strong>Gantt Chart:</strong></p>
+    <img src="image/Screenshot 2025-06-07 130241.png" 
+         alt="Gantt Chart PTPD 1"
+         style="max-width: 100%; height: auto; border: 1px solid #ccc; margin-bottom: 10px;">
+  
+    <img src="image/Screenshot 2025-06-07 130350.png"
+         alt="Gantt Chart PTPD 2"
+         style="max-width: 100%; height: auto; border: 1px solid #ccc;">
+  </div>
+
+  <h3>2. PTD</h3>
+  <p>Berikut adalah hasil perhitungan menggunakan Excel dan ilustrasi Gantt Chart untuk metode PTD:</p>
+  
+  <div style="max-width: 800px; margin: 0 auto; text-align: center; padding: 10px;">
+    <p><strong>Tabel Perhitungan (Excel):</strong></p>
+    <img src="image/Screenshot 2025-06-07 132831.png"
+         alt="Tabel Excel PTPD"
+         style="max-width: 100%; height: auto; margin-bottom: 20px; border: 1px solid #ccc;">
+  
+    <p><strong>Gantt Chart:</strong></p>
+    <img src="image/Screenshot 2025-06-07 133105.png" 
+         alt="Gantt Chart PTPD 1"
+         style="max-width: 100%; height: auto; border: 1px solid #ccc; margin-bottom: 10px;">
+  
+    <img src="image/Screenshot 2025-06-07 133121.png"
+         alt="Gantt Chart PTPD 2"
+         style="max-width: 100%; height: auto; border: 1px solid #ccc;">
+  </div>
+  
+  <h3>3. PTDP</h3>
+  <p>Berikut adalah hasil perhitungan menggunakan Excel dan ilustrasi Gantt Chart untuk metode PTDP:</p>
+  
+  <div style="max-width: 800px; margin: 0 auto; text-align: center; padding: 10px;">
+    <p><strong>Tabel Perhitungan (Excel):</strong></p>
+    <img src="image/Screenshot 2025-06-07 133509.png"
+         alt="Tabel Excel PTPD"
+         style="max-width: 100%; height: auto; margin-bottom: 20px; border: 1px solid #ccc;">
+  
+    <p><strong>Gantt Chart:</strong></p>
+    <img src="image/Screenshot 2025-06-07 133615.png" 
+         alt="Gantt Chart PTPD 1"
+         style="max-width: 100%; height: auto; border: 1px solid #ccc; margin-bottom: 10px;">
+  
+    <img src="image/Screenshot 2025-06-07 133640.png"
+         alt="Gantt Chart PTPD 2"
+         style="max-width: 100%; height: auto; border: 1px solid #ccc;">
+  </div>
+  
+  <h3>4. RPTD</h3>
+  <p>Berikut adalah hasil perhitungan menggunakan Excel dan ilustrasi Gantt Chart untuk metode RPTD:</p>
+  
+  <div style="max-width: 800px; margin: 0 auto; text-align: center; padding: 10px;">
+    <p><strong>Tabel Perhitungan (Excel):</strong></p>
+    <img src="image/Screenshot 2025-06-07 134002.png"
+         alt="Tabel Excel PTPD"
+         style="max-width: 100%; height: auto; margin-bottom: 20px; border: 1px solid #ccc;">
+  
+    <p><strong>Gantt Chart:</strong></p>
+    <img src="image/Screenshot 2025-06-07 134025.png" 
+         alt="Gantt Chart PTPD 1"
+         style="max-width: 100%; height: auto; border: 1px solid #ccc; margin-bottom: 10px;">
+  
+    <img src="image/Screenshot 2025-06-07 134043.png"
+         alt="Gantt Chart PTPD 2"
+         style="max-width: 100%; height: auto; border: 1px solid #ccc;">
+  </div>
+  
+  <h3>5. RR Q=2</h3>
+  <p>Berikut adalah hasil perhitungan menggunakan Excel dan ilustrasi Gantt Chart untuk metode RR Q=2:</p>
+  
+  <div style="max-width: 800px; margin: 0 auto; text-align: center; padding: 10px;">
+    <p><strong>Tabel Perhitungan (Excel):</strong></p>
+    <img src="image/Screenshot 2025-06-07 134315.png"
+         alt="Tabel Excel PTPD"
+         style="max-width: 100%; height: auto; margin-bottom: 20px; border: 1px solid #ccc;">
+  
+    <p><strong>Gantt Chart:</strong></p>
+    <img src="image/Screenshot 2025-06-07 134350.png" 
+         alt="Gantt Chart PTPD 1"
+         style="max-width: 100%; height: auto; border: 1px solid #ccc; margin-bottom: 10px;">
+  
+    <img src="image/Screenshot 2025-06-07 134505.png"
+         alt="Gantt Chart PTPD 2"
+         style="max-width: 100%; height: auto; border: 1px solid #ccc;">
+  </div>
+  
+  <h3>6. RR Q=3</h3>
+  <p>Berikut adalah hasil perhitungan menggunakan Excel dan ilustrasi Gantt Chart untuk metode RR Q=3:</p>
+  
+  <div style="max-width: 800px; margin: 0 auto; text-align: center; padding: 10px;">
+    <p><strong>Tabel Perhitungan (Excel):</strong></p>
+    <img src="image/Screenshot 2025-06-07 134732.png"
+         alt="Tabel Excel PTPD"
+         style="max-width: 100%; height: auto; margin-bottom: 20px; border: 1px solid #ccc;">
+  
+    <p><strong>Gantt Chart:</strong></p>
+    <img src="image/Screenshot 2025-06-07 134802.png" 
+         alt="Gantt Chart PTPD 1"
+         style="max-width: 100%; height: auto; border: 1px solid #ccc; margin-bottom: 10px;">
+  
+    <img src="image/Screenshot 2025-06-07 134824.png"
+         alt="Gantt Chart PTPD 2"
+         style="max-width: 100%; height: auto; border: 1px solid #ccc;">
+  </div>
+  
+  <h3>7. RR Q=4</h3>
+  <p>Berikut adalah hasil perhitungan menggunakan Excel dan ilustrasi Gantt Chart untuk metode RR Q=4:</p>
+  
+  <div style="max-width: 800px; margin: 0 auto; text-align: center; padding: 10px;">
+    <p><strong>Tabel Perhitungan (Excel):</strong></p>
+    <img src="image/Screenshot 2025-06-07 135047.png"
+         alt="Tabel Excel PTPD"
+         style="max-width: 100%; height: auto; margin-bottom: 20px; border: 1px solid #ccc;">
+  
+    <p><strong>Gantt Chart:</strong></p>
+    <img src="image/Screenshot 2025-06-07 135105.png" 
+         alt="Gantt Chart PTPD 1"
+         style="max-width: 100%; height: auto; border: 1px solid #ccc; margin-bottom: 10px;">
+  
+    <img src="image/Screenshot 2025-06-07 135122.png"
+         alt="Gantt Chart PTPD 2"
+         style="max-width: 100%; height: auto; border: 1px solid #ccc;">
+  </div>
+  
+  <h3>8. RR=5</h3>
+  <p>Berikut adalah hasil perhitungan menggunakan Excel dan ilustrasi Gantt Chart untuk metode RR Q=5:</p>
+  
+  <div style="max-width: 800px; margin: 0 auto; text-align: center; padding: 10px;">
+    <p><strong>Tabel Perhitungan (Excel):</strong></p>
+    <img src="image/Screenshot 2025-06-07 135333.png"
+         alt="Tabel Excel PTPD"
+         style="max-width: 100%; height: auto; margin-bottom: 20px; border: 1px solid #ccc;">
+  
+    <p><strong>Gantt Chart:</strong></p>
+    <img src="image/Screenshot 2025-06-07 135351.png" 
+         alt="Gantt Chart PTPD 1"
+         style="max-width: 100%; height: auto; border: 1px solid #ccc; margin-bottom: 10px;">
+  
+    <img src="image/Screenshot 2025-06-07 135425.png"
+         alt="Gantt Chart PTPD 2"
+         style="max-width: 100%; height: auto; border: 1px solid #ccc;">
+  </div>
+  
+  
+
+
+  
+
+
+</body>
+</html>
